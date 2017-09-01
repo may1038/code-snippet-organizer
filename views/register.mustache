@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>register page</title>
+  </head>
+  <body>
+    <h1>register page</h1>
+
+    <form class="" action="/register" method="post">
+      <div class="">
+        <label for="">Name</label>
+        <input type="text" name="name" value="">{{#error.name}}Name is required{{/error.name}}
+      </div>
+      <div class="">
+        <label for="">Email</label>
+        <input type="email" name="email" value="">
+      </div>
+      <div class="">
+        <label for="">Username</label>
+        <input type="text" name="username" value="">
+      </div>
+      <div class="">
+        <label for="">Password</label>
+        <input type="password" name="password" value="">
+      </div>
+      <div class="">
+        <button type="submit" name="button">Submit</button>
+      </div>
+
+    </form>
+  </body>
+</html>
