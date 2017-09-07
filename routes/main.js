@@ -1,21 +1,24 @@
 const express = require("express")
 const router = express.Router()
 const mongoose = require("mongoose")
-const Users = require("../models/Users")
+const User = require("../models/Users")
 const bcrypt = require("bcryptjs")
-
+const Snippet = require("../models/Snippets")
 //render is something form your view folder so you DON'T need a /
 //redirect is always from a link so you DO need a /
-router.get("/", function(req, res) {
-  res.redirect("/welcome")
-})
-
-router.get("/welcome", function(req, res) {
-  res.render("welcome")
-})
-
-router.get("/login", function(req, res) {
-  res.render("login")
+const requireAuth = function(req, res, next) {
+  if (req.session.user) {
+    next()
+  } else {
+    res.redirect("/login")
+  }
+}
+router.get("/", requireAuth, function(req, res) {
+  Snippet.find().then(function(newSnippet) {
+    res.render("index", {
+      newSnippet: newSnippet
+    })
+  })
 })
 
 router.get("/register", function(req, res) {

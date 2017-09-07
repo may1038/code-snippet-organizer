@@ -5,11 +5,21 @@
     <title>Welcome</title>
   </head>
   <body>
-
-    <h1>welcome.mustache</h1>
-    <div class="">
-      <a href="/login">Log In</a>
-    </div>
+    
+    <h1>login page</h1>
+    <form class="" action="/login" method="post">
+      <div class="">
+        <label for="">Username</label>
+        <input type="text" name="username" value="">
+      </div>
+      <div class="">
+        <label for="">Password</label>
+        <input type="password" name="password" value="">
+      </div>
+      <div class="">
+        <button type="submit" name="button">Submit</button>
+      </div>
+    </form>
 
     <div class="">
       <a href="/register">Register</a>

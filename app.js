@@ -15,8 +15,24 @@ app.use(bodyParser.urlencoded({ extended: false }))
 const url = "mongodb://127.0.0.1:27017/snippet"
 mongoose.connect(url)
 
+var sess = {
+  secret: "keyboard cat",
+  cookies: {},
+  saveUninitialized: true,
+  resave: true,
+  store: mongooseSession(mongoose)
+}
+
+app.use(session(sess))
+
 const routeApp = require("./routes/main")
 app.use(routeApp)
+
+const welcome = require("./routes/welcome")
+app.use(welcome)
+
+const newSnippet = require("./routes/snippet")
+app.use(newSnippet)
 
 app.listen(3000, function() {
   console.log("Listening")
