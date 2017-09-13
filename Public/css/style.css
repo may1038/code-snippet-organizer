@@ -1,0 +1,103 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  background-color: #b54949;
+  padding: 20px;
+}
+
+a {
+  color: black;
+}
+
+.signOutCreateSnip {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.snippetPage {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.password {
+  margin-top: 10px;
+}
+
+.editDelete {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.submitBtn {
+  margin-top: 10px;
+  padding-left: 150px;
+}
+
+.register {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.registerHref {
+  display: flex;
+  margin-bottom: 15px;
+  padding-left: 30px;
+}
+
+.snippetStyle {
+  width: 300px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #d4d1d1;
+}
+
+.bySnippet {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #d4d1d1;
+}
+
+.byLanguage {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #d4d1d1;
+}
+
+.byTag {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #d4d1d1;
+}

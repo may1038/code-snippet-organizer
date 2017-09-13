@@ -13,6 +13,7 @@ const requireAuth = function(req, res, next) {
     res.redirect("/login")
   }
 }
+// get
 router.get("/", requireAuth, function(req, res) {
   Snippet.find().then(function(newSnippet) {
     res.render("index", {
@@ -47,6 +48,11 @@ router.post("/register", function(req, res) {
         error: error.errors
       })
     })
+})
+
+router.get("/signOut", function(req, res) {
+  req.session.user = null
+  res.redirect("login")
 })
 
 module.exports = router

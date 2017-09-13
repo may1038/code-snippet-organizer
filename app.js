@@ -31,8 +31,14 @@ app.use(routeApp)
 const welcome = require("./routes/welcome")
 app.use(welcome)
 
-const newSnippet = require("./routes/snippet")
+const newSnippet = require("./routes/newSnippet")
 app.use(newSnippet)
+
+const snippet = require("./routes/snippet")
+app.use(snippet)
+
+const editSnippet = require("./routes/edit")
+app.use(editSnippet)
 
 app.listen(3000, function() {
   console.log("Listening")

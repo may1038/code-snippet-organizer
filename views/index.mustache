@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-<a href="/newSnippet">Create Snippet</a>
-<div class="">
+    <div class="signOutCreateSnip">
+      <a href="/signOut">Sign Out</a>
+      <a href="/newSnippet">Create Snippet</a>
+    </div>
+  <h2>By Snippet</h2>
+  <div class="bySnippet">
+    {{#newSnippet}}
+  <a href="/snippet/{{_id}}">{{title}}</a>
+  {{/newSnippet}}
+</div>
+  <h2>By Language</h2>
+  <div class="byLanguage">
+
+  <!-- remove duplicates when pulling language from db -->
+
   {{#newSnippet}}
-  {{title}}
+  <a href="/snippet/{{_id}}">{{language}}</a>
+  {{/newSnippet}}
+</div>
+  <h2>By Tag</h2>
+  <div class="byTag">
+  {{#newSnippet}}
+  <a href="/snippet/{{_id}}">{{tags}}</a>
   {{/newSnippet}}
 </div>
 

@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta charset="utf-8">
     <title>Welcome</title>
   </head>
   <body>
-    
-    <h1>login page</h1>
+
+    <div class="registerHref">
+    <h1>login</h1>
+      <a class="register" href="/register">Register</a>
+    </div>
     <form class="" action="/login" method="post">
       <div class="">
         <label for="">Username</label>
         <input type="text" name="username" value="">
       </div>
-      <div class="">
+      <div class="password">
         <label for="">Password</label>
         <input type="password" name="password" value="">
       </div>
-      <div class="">
+      <div class="submitBtn">
         <button type="submit" name="button">Submit</button>
       </div>
     </form>
 
-    <div class="">
-      <a href="/register">Register</a>
-    </div>
 
   </body>
 </html>
